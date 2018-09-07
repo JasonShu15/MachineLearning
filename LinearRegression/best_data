@@ -1,0 +1,33 @@
+#coding:utf-8
+'''
+-----------------------------
+筛选预测风速均方根误差最大，但是预测结果最好的点
+如果用横坐标表示预测风速均方根误差，纵坐标表示预测结果最好的点
+'''
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+import numpy as np
+dataSet = pd.read_csv("D://Personal//Desktop//sunite.csv")
+dataSet_x = dataSet['rmse'].tolist()
+dataSet_y = dataSet['accuracy'].tolist()
+X = np.array(dataSet_x).reshape(-1,1)#type:numpy.ndarray
+Y = np.array(dataSet_y).reshape(-1,1)
+model = LinearRegression()
+model.fit(X,Y)
+intercept = model.intercept_#截距
+#print intercept
+coef = model.coef_#系数,斜率
+#print coef
+D_value=dataSet_y - coef * dataSet_x-intercept#求差值
+listValue=D_value[0].tolist()
+for i in range(10):
+    maxValue=max(listValue)
+    maxIndex=listValue.index(maxValue)
+    popValue=listValue.pop(maxIndex)#删掉的最大值
+
+import matplotlib.pyplot as plt
+plt.scatter(X,Y,color='black',marker='o')
+plt.scatter(X,model.predict(X),color='blue',marker='+')
+plt.xlabel('rmse')
+plt.ylabel('accuracy')
+plt.show()
