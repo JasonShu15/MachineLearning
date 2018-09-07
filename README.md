@@ -3,3 +3,5 @@
 1.梯度下降Gradient Descent
 
 2.线性回归Linear Regression
+
+3.支持向量机SVM
