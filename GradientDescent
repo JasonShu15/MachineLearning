@@ -1,3 +1,7 @@
+'''
+本文转自简书https://www.jianshu.com/p/c7e642877b0e
+'''
+
 import numpy as np
 
 # Size of the points dataset.
@@ -31,7 +35,7 @@ def gradient_descent(X, y, alpha):
     '''Perform gradient descent.'''
     theta = np.array([1, 1]).reshape(2, 1)
     gradient = gradient_function(theta, X, y)
-    while not np.all(np.absolute(gradient) <= 1e-5):
+    while not np.all(np.absolute(gradient) <= 1e-5):#当判别式np.absolute(gradient) <= 1e-5都满足时，while就不执行
         theta = theta - alpha * gradient
         gradient = gradient_function(theta, X, y)
     return theta
