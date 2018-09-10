@@ -4,6 +4,8 @@
 本文选自b站视频https://www.bilibili.com/video/av22820580/?p=4
 以及视频配套博客http://www.thpffcj.com/2018/05/22/Python-Machine-Learning-8/
 
+配套笔记:http://note.youdao.com/noteshare?id=e27f7bea0785413dd2eb876f657dba16&sub=F96B790246B7497AB3C9010118E34F24
+
 scikit-learn中的线性SVM使用方法，包括hard margin SVM和soft margin SVM
 
 """
