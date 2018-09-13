@@ -7,5 +7,7 @@
 3.支持向量机SVM
 
   a.Hard Margin SVM 和 Soft Margin SVM
+  
   b.含核函数的SVM
+  
   c.不调用scikit-learn的SVM源代码
