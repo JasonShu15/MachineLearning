@@ -1,8 +1,8 @@
 机器学习算法(python)，包含:
 
-1.梯度下降Gradient Descent：梯度下降原理
+1.梯度下降Gradient Descent: 梯度下降原理
 
-2.线性回归Linear Regression:利用线性回归寻优
+2.线性回归Linear Regression: 利用线性回归寻优
 
 3.支持向量机SVM
 
