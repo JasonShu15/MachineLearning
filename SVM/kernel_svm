@@ -2,7 +2,7 @@
 """
 @author: Haojie Shu
 @time: 2018/09/28
-@description:含核函数的SVM算法,也即二维空间不可分,只能在高维空间中分
+@description:含核函数的SVM算法
 """
 import matplotlib.pyplot as plt
 
